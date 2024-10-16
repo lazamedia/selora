@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimalist Login Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman Login Minimalis</title>
   <style>
     * {
       margin: 0;
@@ -67,7 +67,7 @@
     .input-box label {
       position: absolute;
       top: 50%;
-      left: 12px; /* Sesuaikan agar label berada dalam input */
+      left: 12px;
       transform: translateY(-50%);
       color: #888;
       font-size: 14px;
@@ -130,13 +130,32 @@
       font-weight: 300;
     }
 
+    /* Media Query yang Diperbarui */
     @media (max-width: 768px) {
       .login-box {
         padding: 30px;
-        max-width: 320px;
+        max-width: 350px; /* Tingkatkan dari 320px menjadi 350px */
       }
       h2 {
         font-size: 22px;
+      }
+    }
+
+    /* Tambahan Media Query untuk Lebih Kecil */
+    @media (max-width: 480px) {
+      .login-box {
+        padding: 20px;
+        max-width: 90%; /* Mengisi 90% dari lebar layar */
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .input-box input {
+        padding: 12px 8px;
+      }
+      button.btn {
+        padding: 12px;
+        font-size: 14px;
       }
     }
   </style>
@@ -157,8 +176,8 @@
       </div>
       <button type="submit" class="btn">Login</button>
     </form>
-    <p>Don't have an account? <a href="/register">Sign up</a></p>
-    <a href="/" class="back-btn">Back Home</a>
+    <p>Belum punya akun? <a href="/register">Daftar</a></p>
+    <a href="/" class="back-btn">Kembali ke Beranda</a>
   </div>
 </body>
 </html>

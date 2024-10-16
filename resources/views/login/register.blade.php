@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Halaman Registrasi</title>
   <style>
     * {
       margin: 0;
@@ -67,7 +67,7 @@
     .input-box label {
       position: absolute;
       top: 50%;
-      left: 12px; /* Sesuaikan untuk membuatnya tepat di dalam input */
+      left: 12px; /* Sesuaikan agar label berada dalam input */
       transform: translateY(-50%);
       color: #888;
       font-size: 14px;
@@ -138,16 +138,37 @@
       font-weight: 300;
     }
 
+    /* Media Query yang Diperbarui untuk Maksimal 768px */
     @media (max-width: 768px) {
       .register-box {
         padding: 30px;
-        max-width: 320px;
+        max-width: 350px; /* Tingkatkan dari 320px menjadi 350px */
       }
       h2 {
         font-size: 22px;
       }
     }
+
+    /* Media Query Tambahan untuk Layar Lebih Kecil (480px) */
+    @media (max-width: 480px) {
+      .register-box {
+        padding: 20px;
+        max-width: 90%; /* Mengisi 90% dari lebar layar */
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .input-box input {
+        padding: 12px 8px;
+      }
+      button.btn {
+        padding: 12px;
+        font-size: 14px;
+      }
+    }
   </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <script>
     function validatePassword() {
       const password = document.getElementById("password");
@@ -165,14 +186,14 @@
 </head>
 <body>
   <div class="register-box">
-    <h2>Register</h2>
+    <h2>Registrasi</h2>
     <form action="/register" method="POST">
       <div class="input-box">
-        <input type="text" name="name" required>
+        <input type="text" name="name" id="name" required>
         <label>Nama</label>
       </div>
       <div class="input-box">
-        <input type="text" name="username" required>
+        <input type="text" name="username" id="username" required>
         <label>Username</label>
       </div>
       <div class="input-box">
@@ -183,11 +204,10 @@
         <input type="password" name="confirmPassword" id="confirmPassword" required oninput="validatePassword()">
         <label>Konfirmasi Password</label>
       </div>
-      <button type="submit" class="btn">Register</button>
-
+      <button type="submit" class="btn">Registrasi</button>
     </form>
     <p>Sudah punya akun? <a href="/login">Login</a></p>
-    <a href="/" class="back-btn">Back Home</a>
+    <a href="/" class="back-btn">Kembali ke Beranda</a>
   </div>
 </body>
 </html>

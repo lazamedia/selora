@@ -380,10 +380,10 @@ body{
             <img src="img/s-1.jpg" alt="">
         </div>
         <div class="box-banner" id="slide2">
-            <img src="img/s-2.jpg" alt="">
+            <img src="img/s-21.jpg" alt="">
         </div>
         <div class="box-banner" id="slide3">
-            <img src="img/s-3.jpg" alt="">
+            <img src="img/s-31.jpg" alt="">
         </div>
     </div>
 

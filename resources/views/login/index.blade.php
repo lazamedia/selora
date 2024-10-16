@@ -79,8 +79,8 @@
 
     .input-box input:focus ~ label,
     .input-box input:valid ~ label {
-      top: -10px;
-      left: 10px;
+      top: -2px;
+      left: 3px;
       font-size: 12px;
       color: #1abc9c;
       padding-left: 5px;

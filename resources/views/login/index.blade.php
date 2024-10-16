@@ -144,8 +144,8 @@
     /* Tambahan Media Query untuk Lebih Kecil */
     @media (max-width: 480px) {
       .login-box {
-        padding: 20px;
-        max-width: 90%; /* Mengisi 90% dari lebar layar */
+        padding: 30px;
+        width: 90%; /* Mengisi 90% dari lebar layar */
       }
       h2 {
         font-size: 20px;

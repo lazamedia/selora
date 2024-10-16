@@ -3,7 +3,9 @@
 @section('container')
 
 <style>
-
+body{
+    background-color: #f7f7f7;
+}
 /* Hero Section */
     .c-hero {
         display: flex;
@@ -119,6 +121,7 @@
         width: 120px;
         height: 150px;
         border: 1px solid #a3a3a3;
+        background-color: white;
         border-radius: 10px;
         align-content: center;
         text-align: center;
@@ -126,6 +129,9 @@
         padding: 10px;
         text-decoration: none;
         color: #0E2C2C;    
+    }
+    .box-kategori:hover {
+        border: 1px solid #28BA79;
     }
     .box-kategori img {
         width: 100%;
@@ -215,7 +221,7 @@
     .c-produk {
         width: 100%;
         margin: 30px 0 130px 0;
-        padding: 0px;  
+        padding: 50px;  
     }
     .c-box-produk {
         display: flex;
@@ -230,7 +236,7 @@
         min-width: 180px;
         height: auto;
         border: 1px solid #dfdfdf;
-        border-radius: 10px;
+        background-color: #ffff;
         align-content: center;
         text-align: left;
         align-items: center;
@@ -238,8 +244,19 @@
         color: #0E2C2C;    
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    .box-produk:hover{
+        border: 1px solid #28BA79;
+    }
     .box-produk img {
         width: 100%;
+    }
+    .tag-promo {
+        position: absolute;
+        padding: 2px 10px;
+        font-size: 10pt;
+        border-bottom-right-radius: 10px;
+        background-color: #28BA79;
+        color: #DCFDF0;
     }
     .p-content{
         padding: 11px;
@@ -285,6 +302,15 @@
         font-size: 7pt;
         color: #555;
     }
+
+    @media (max-width: 768px) {
+        .c-box-produk {
+            padding: 0%;
+        }
+    }
+/* end */
+
+
 </style>
 
 <!-- Hero Section -->
@@ -425,7 +451,9 @@
         </div>
         <div class="c-box-produk">
 
+            @for ($i = 0; $i < 30; $i++)
             <div class="box-produk">
+                <div class="tag-promo">Promo</div>
                 <img src="img/contoh.png" alt="">
                 <div class="p-content">
                     <p class="p-kategory">Minuman Kaleng</p>
@@ -437,114 +465,7 @@
                     </div>
                 </div>
             </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-produk">
-                <img src="img/contoh.png" alt="">
-                <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
-                    <h5>Susu Bearbrend Kaleng 100ml</h5>
-                    <p class="barcode"><span>Kode.</span>21314141511</p>
-                    <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
-                        <a href="" class="p-add">+ Add</a>
-                    </div>
-                </div>
-            </div>
+            @endfor
 
         </div>
     </div>

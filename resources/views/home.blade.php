@@ -160,7 +160,7 @@
         flex: 0 0 auto; /* Mencegah box menyusut */
         width: 120px;    /* Sesuaikan jika perlu */
     }
-}
+    }
 /* end */
 
 /* Banner Section */
@@ -206,7 +206,85 @@
             text-align: center;
         }
     }
+/* end */
 
+/* Produk Section */
+    .h-produk {
+        padding-left: 30px;
+    }
+    .c-produk {
+        width: 100%;
+        margin: 30px 0 130px 0;
+        padding: 0px;  
+    }
+    .c-box-produk {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 17px;
+    }
+    .box-produk {
+        width: 13.2%;
+        min-width: 180px;
+        height: auto;
+        border: 1px solid #dfdfdf;
+        border-radius: 10px;
+        align-content: center;
+        text-align: left;
+        align-items: center;
+        text-decoration: none;
+        color: #0E2C2C;    
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .box-produk img {
+        width: 100%;
+    }
+    .p-content{
+        padding: 11px;
+    }
+    .box-produk p{
+        margin: 0%;
+    }
+    .p-kategory{
+        font-size: 7pt;
+        font-weight: bold;
+    }
+    .box-produk h5 {
+        font-size: 11pt;
+        font-weight: bold;
+        margin: 0px;
+    }
+    .p-harga{
+        justify-content: space-between;
+        display: flex;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .p-harga h4 {
+        font-size: 12pt;
+    }
+    .p-harga a {
+        text-decoration: none;
+        font-size: 9pt;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 3px 10px;
+        border: 1px solid #28BA79;
+        background-color: #DCFDF0;
+        color: #28BA79;
+        border-radius: 5px;
+    }
+    .h-harga{
+        margin: auto 1px;  
+    }
+    .barcode{
+        font-size: 7pt;
+        color: #555;
+    }
 </style>
 
 <!-- Hero Section -->
@@ -284,59 +362,193 @@
     </div>
 
    <!-- Tambahkan script ini sebelum tag </body> -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const banner = document.getElementById('banner');
-        const boxes = document.querySelectorAll('.box-banner');
-        let currentIndex = 0;
-        const total = boxes.length;
-        const intervalTime = 3000; // Waktu pergantian dalam milidetik (3 detik)
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const banner = document.getElementById('banner');
+            const boxes = document.querySelectorAll('.box-banner');
+            let currentIndex = 0;
+            const total = boxes.length;
+            const intervalTime = 3000; // Waktu pergantian dalam milidetik (3 detik)
 
-        function scrollToCurrent() {
-            const bannerWidth = banner.clientWidth;
-            banner.scrollTo({
-                left: bannerWidth * currentIndex,
-                behavior: 'smooth'
-            });
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % total;
-            scrollToCurrent();
-        }
-
-        // Hanya aktifkan otomatisasi pada mode responsif
-        function checkResponsive() {
-            if (window.innerWidth <= 768) {
-                return true;
+            function scrollToCurrent() {
+                const bannerWidth = banner.clientWidth;
+                banner.scrollTo({
+                    left: bannerWidth * currentIndex,
+                    behavior: 'smooth'
+                });
             }
-            return false;
-        }
 
-        let slideInterval;
-
-        function startSlideshow() {
-            if (checkResponsive()) {
-                slideInterval = setInterval(nextSlide, intervalTime);
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % total;
+                scrollToCurrent();
             }
-        }
 
-        function stopSlideshow() {
-            clearInterval(slideInterval);
-        }
+            // Hanya aktifkan otomatisasi pada mode responsif
+            function checkResponsive() {
+                if (window.innerWidth <= 768) {
+                    return true;
+                }
+                return false;
+            }
 
-        // Mulai slideshow saat halaman dimuat
-        startSlideshow();
+            let slideInterval;
 
-        // Restart slideshow saat window di-resize
-        window.addEventListener('resize', function() {
-            stopSlideshow();
+            function startSlideshow() {
+                if (checkResponsive()) {
+                    slideInterval = setInterval(nextSlide, intervalTime);
+                }
+            }
+
+            function stopSlideshow() {
+                clearInterval(slideInterval);
+            }
+
+            // Mulai slideshow saat halaman dimuat
             startSlideshow();
+
+            // Restart slideshow saat window di-resize
+            window.addEventListener('resize', function() {
+                stopSlideshow();
+                startSlideshow();
+            });
         });
-    });
-</script>
+    </script>
 
         
 <!-- End Banner Section -->
+
+<!-- Produk Section -->
+
+    <div class="c-produk">
+        <div class="h-produk">
+            <h4>Produk</h4>
+        </div>
+        <div class="c-box-produk">
+
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box-produk">
+                <img src="img/contoh.png" alt="">
+                <div class="p-content">
+                    <p class="p-kategory">Minuman Kaleng</p>
+                    <h5>Susu Bearbrend Kaleng 100ml</h5>
+                    <p class="barcode"><span>Kode.</span>21314141511</p>
+                    <div class="p-harga">
+                        <h4 class="h-harga">Rp.100.000</h4>
+                        <a href="" class="p-add">+ Add</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+<!-- End Produk Section -->
 
 @endsection

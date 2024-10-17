@@ -43,6 +43,7 @@ body{
         flex-direction: row;
         align-items: center;
         width: 70%;
+        box-sizing: border-box;
     }
     .input-hero input {
         flex: 1;
@@ -54,6 +55,7 @@ body{
         outline: none;
         font-size: 12px;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        box-sizing: border-box;
     }
     .input-hero input::placeholder {
         color: #999;
@@ -78,6 +80,8 @@ body{
         .c-hero {
             flex-direction: column;
             height: auto;
+            align-items: center;
+            align-content: center;
         }
         .box-hero {
             width: 100%;
@@ -88,6 +92,7 @@ body{
             width: 80%;
             flex-direction: row;
             margin: auto;
+
         }
 
 
@@ -233,7 +238,7 @@ body{
     }
     .box-produk {
         width: 13.2%;
-        min-width: 170px;
+        min-width: 180px;
         height: auto;
         border: 1px solid #dfdfdf;
         background-color: #ffff;
@@ -305,7 +310,7 @@ body{
 
     @media (max-width: 768px) {
         .c-produk{
-            padding: 10px;
+            padding: 0px;
         }
         .c-box-produk {
             padding: 0%;

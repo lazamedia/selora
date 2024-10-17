@@ -233,7 +233,7 @@ body{
     }
     .box-produk {
         width: 13.2%;
-        min-width: 180px;
+        min-width: 170px;
         height: auto;
         border: 1px solid #dfdfdf;
         background-color: #ffff;
@@ -304,6 +304,9 @@ body{
     }
 
     @media (max-width: 768px) {
+        .c-produk{
+            padding: 10px;
+        }
         .c-box-produk {
             padding: 0%;
         }
@@ -460,7 +463,7 @@ body{
                     <h5>Susu Bearbrend Kaleng 100ml</h5>
                     <p class="barcode"><span>Kode.</span>21314141511</p>
                     <div class="p-harga">
-                        <h4 class="h-harga">Rp.100.000</h4>
+                        <h4 class="h-harga">Rp.724.000</h4>
                         <a href="" class="p-add">+ Add</a>
                     </div>
                 </div>

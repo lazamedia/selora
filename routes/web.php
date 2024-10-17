@@ -22,3 +22,10 @@ Route::get('/register', function () {
         "active" => "login"
     ]);
 });
+
+Route::get('/cart', function () {
+    return view('cart',[
+        "title" => "cart",
+        "active" => "cart"
+    ]);
+});

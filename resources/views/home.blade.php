@@ -456,7 +456,7 @@ body{
                 <div class="tag-promo">Promo</div>
                 <img src="img/contoh.png" alt="">
                 <div class="p-content">
-                    <p class="p-kategory">Minuman Kaleng</p>
+                    {{-- <p class="p-kategory">Minuman Kaleng</p> --}}
                     <h5>Susu Bearbrend Kaleng 100ml</h5>
                     <p class="barcode"><span>Kode.</span>21314141511</p>
                     <div class="p-harga">

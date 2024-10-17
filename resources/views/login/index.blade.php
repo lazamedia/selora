@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Halaman Login Minimalis</title>
+  <title>Login</title>
   <style>
     * {
       margin: 0;

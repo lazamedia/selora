@@ -20,7 +20,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            background-color: #17a196;
+            background-color: #006f7e;
             color: #ffffff;
             justify-content: space-between;
             align-items: center;
@@ -41,8 +41,8 @@
             bottom: 0;
             left: 0;
             background-color: #ffffff;
-            color: #17a196;
-            border-top: 1px solid #17a196;
+            color: #006f7e;
+            border-top: 1px solid #006f7e;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -63,7 +63,7 @@
             gap: 5px;
         }
         .footer button {
-            background-color: #17a196;
+            background-color: #006f7e;
             color: #ffffff;
             padding: 10px 20px;
             border: none;
@@ -82,7 +82,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid #17a196;
+            border-bottom: 1px solid #006f7e;
             padding: 10px 0;
         }
         .items {
@@ -106,8 +106,8 @@
             gap: 15px;
         }
         .qty button {
-            padding: 5px 10px;
-            background-color: #17a196;
+            padding: 2px 10px;
+            background-color: #006f7e;
             color: #ffffff;
             border: none;
             cursor: pointer;
@@ -121,16 +121,20 @@
         }
         .delete-selected {
             display: none;
-            margin-left: 20px;
-            background-color: #e74c3c;
+            margin-right: 50px;
+            border: 1px solid #ffffff !important;
+            background-color: #85858500;
             color: white;
-            padding: 10px 20px;
+            padding: 5px 10px;
             border: none;
-            border-radius: 10px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 10pt;
         }
-        .delete-selected:hover {
-            background-color: #c51400;
+        .footer-kanan button{
+            padding: 5px 10px;
+            font-size: 11pt;
+            border-radius: 5px;
         }
         p , h4, h3 {
             margin: 0%;
@@ -142,19 +146,21 @@
             font-size: 19pt;
         }
         .footer h1 {
-            font-size: 21pt;
+            font-size: 19pt;
             font-weight: 700;
         }
         @media (max-width: 768px) {
             .c-item {
-                padding: 10px;
+                padding: 30px;
+                margin-top: 25px;
             }
             .item img {
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
             }
             .deskripsi-item h4 {
                 font-size: 11pt;
+                font-weight: 600;
             }
             .deskripsi-item p {
                 font-size: 7pt;
@@ -163,13 +169,19 @@
                 font-size: 14pt;
             }
             .qty button {
-                padding: 3px 6px;
+                padding: 1px 6px;
             }
             .jml {
                 font-size: 12pt;
             }
             h1{
                 font-size: 17pt;
+            }
+            .delete-selected{
+                margin-right: 10px; 
+            }
+            .item{
+                padding: 18px 0px;
             }
         }
     </style>
@@ -199,7 +211,7 @@
         </div>
         <div class="qty">
             <button class="increase">+</button>
-            <div class="jml">10</div>
+            <div class="jml" type="input">10</div>
             <button class="decrease">-</button>
         </div>
     </div>
@@ -273,7 +285,7 @@
             icon: 'warning',
             width: 400, // Ukuran box lebih kecil
             showCancelButton: true,
-            confirmButtonColor: '#17a196',
+            confirmButtonColor: '#006f7e',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Ya, hapus!',
             cancelButtonText: 'Batal'
